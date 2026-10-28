@@ -1,4 +1,3 @@
-
 # WindLens — UK Wind Forecast Intelligence
 
 WindLens is a data analysis dashboard for comparing forecast UK wind generation against recorded generation during January 2026.
@@ -20,6 +19,7 @@ The application retrieves data from the Elexon BMRS API, evaluates forecast accu
 ## Technology stack
 
 **Frontend**
+
 - React
 - TypeScript
 - Vite
@@ -27,6 +27,7 @@ The application retrieves data from the Elexon BMRS API, evaluates forecast accu
 - Lucide React
 
 **Backend**
+
 - Python
 - FastAPI
 - Pandas
@@ -34,35 +35,37 @@ The application retrieves data from the Elexon BMRS API, evaluates forecast accu
 - Pytest
 
 **Data source**
+
 - Elexon BMRS API
 
 ## Project structure
 
+```
 windlens/
 ├── backend/
-│   ├── app/
-│   │   ├── __init__.py
-│   │   ├── analysis.py
-│   │   ├── elexon.py
-│   │   └── main.py
-│   ├── tests/
-│   │   └── test_analysis.py
-│   ├── Dockerfile
-│   ├── .dockerignore
-│   └── requirements.txt
+│ ├── app/
+│ │ ├── **init**.py
+│ │ ├── analysis.py
+│ │ ├── elexon.py
+│ │ └── main.py
+│ ├── tests/
+│ │ └── test_analysis.py
+│ ├── Dockerfile
+│ ├── .dockerignore
+│ └── requirements.txt
 ├── frontend/
-│   ├── src/
-│   │   ├── App.tsx
-│   │   ├── index.css
-│   │   └── main.tsx
-│   ├── package.json
-│   └── index.html
+│ ├── src/
+│ │ ├── App.tsx
+│ │ ├── index.css
+│ │ └── main.tsx
+│ ├── package.json
+│ └── index.html
 └── README.md
-
+```
 
 ## Prerequisites
 
-- Python 3.12 recommended
+- Python 3.12 or 3.14 recommended
 - Node.js and npm
 - Internet access for retrieving Elexon data
 
@@ -151,19 +154,19 @@ Let forecast generation be \(F_t\) and actual generation be \(A_t\).
 **Mean Absolute Error**
 
 \[
-MAE = \frac{1}{n}\sum_{t=1}^{n}|F_t-A_t|
+MAE = \frac{1}{n}\sum\_{t=1}^{n}|F_t-A_t|
 \]
 
 **Root Mean Squared Error**
 
 \[
-RMSE = \sqrt{\frac{1}{n}\sum_{t=1}^{n}(F_t-A_t)^2}
+RMSE = \sqrt{\frac{1}{n}\sum\_{t=1}^{n}(F_t-A_t)^2}
 \]
 
 **Forecast bias**
 
 \[
-Bias = \frac{1}{n}\sum_{t=1}^{n}(F_t-A_t)
+Bias = \frac{1}{n}\sum\_{t=1}^{n}(F_t-A_t)
 \]
 
 Positive bias means forecast generation exceeded actual generation on average; negative bias means it was lower.
@@ -201,9 +204,8 @@ A Dockerfile is included for container-compatible hosting. Building or running D
 
 ## AI-use disclosure
 
-AI tools were used to assist with development tasks, including code drafting, implementation guidance, and debugging. The application, data processing, tests, and reported results should be reviewed and verified by the developer before submission.
+Antigravity IDE was the AI tool used to assist with development tasks, including code drafting, implementation guidance, and debugging.
 
 ## License
 
-No license has been specified. Add one if the project is intended for reuse or redistribution.
-```
+No license has been specified.
